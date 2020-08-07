@@ -1,4 +1,5 @@
 # Ensure Laravel project's .env file is correct in the src directory:
+
     APP_URL=http://localhost:8080
     DB_HOST=mysql
     DB_DATABASE= *Project's database name*
@@ -7,9 +8,11 @@
 
 # Ensure '/src/storage' directory is full permissions in container (chmod 777 -R storage)
 
-# Run these commands below manually
+# Start docker
 
     sudo docker-compose up -d --build
+
+# Run these commands below manually for each project
     
     sudo docker-compose run --rm composer update --no-scripts
     sudo docker-compose run --rm artisan key:generate
