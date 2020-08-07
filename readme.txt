@@ -29,7 +29,7 @@
         GRANT ALL PRIVILEGES ON *.* TO 'homestead'@'%';
 
     * Copy sql files to root project directory for access by Docker
-        docker exec -i mysql mysql -uroot -psecret dbName < fileName.sql
+        sudo docker exec -i mysql mysql -uroot -psecret dbName < fileName.sql
 
 # Containers created and their ports (if used) are as follows:
 
