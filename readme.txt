@@ -20,7 +20,7 @@
     
 # Download project source code in an external directory, and symlink src directory to it for easy docker re-use between projects
     * From root docker-laravel directory
-        ln path/to/source/code src
+        ln ../project-src-directory src
 
 # For importing databases manually:
 
@@ -50,3 +50,13 @@
     host: mysql
     user: root
     pass: secret
+    
+# Final file structure
+    - docker-laravel (this codebase)
+        - mysql
+        - nginx
+        - src (symlink to project source code)
+        - docker-compose.yml
+        - Dockerfile
+        - readme.txt
+    - project-src-directory (peer of docker-laravel directory)
