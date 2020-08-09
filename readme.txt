@@ -45,13 +45,14 @@
     composer
     artisan
 
-# phpmyadmin - Attach to container via browser
+# Mysql credentials
 
     host: mysql
     user: root
     pass: secret
     
 # Final file structure
+
     - docker-laravel (this codebase)
         - mysql
         - nginx
