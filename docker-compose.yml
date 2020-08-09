@@ -49,25 +49,6 @@ services:
     networks:
       - laravel
 
-  phpMyAdmin:
-    image: phpmyadmin/phpmyadmin:latest
-    container_name: phpmyadmin
-    depends_on:
-        - php
-        - mysql
-        - nginx
-    ports:
-        - "8081:80"
-    links:
-        - mysql
-    environment:
-      PMA_HOST: mysql
-      PMA_PORT: 3306
-      PMA_ARBITRARY: 1
-    restart: always
-    networks:
-        - laravel
-
   composer:
     image: composer:latest
     container_name: composer
