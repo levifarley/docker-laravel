@@ -1,3 +1,7 @@
+# Download project source code in an external directory, and symlink src directory to it for easy docker re-use between projects
+    * From root docker-laravel directory
+        ln ../project-src-directory src
+
 # Ensure Laravel project's .env file is correct in the src directory:
 
     APP_URL=http://localhost:8080
@@ -17,10 +21,6 @@
     sudo docker-compose run --rm composer update --no-scripts
     sudo docker-compose run --rm artisan key:generate
     sudo docker-compose run --rm npm install
-    
-# Download project source code in an external directory, and symlink src directory to it for easy docker re-use between projects
-    * From root docker-laravel directory
-        ln ../project-src-directory src
 
 # For importing databases manually:
 
