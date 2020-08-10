@@ -8,7 +8,9 @@
 
 # If anything needs acess to our laravel container (like as an API), use IPV6 address [::1] instead of 'localhost' for routing to work properly
 
-# Ensure '/src/storage' directory is full permissions in container (chmod 777 -R storage)
+# Ensure '/src/storage' directory is full permissions in container
+    
+    chmod 777 -R src/storage
 
 # Start docker
 
