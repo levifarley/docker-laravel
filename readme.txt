@@ -1,6 +1,4 @@
-# Download project source code in an external directory, and symlink src directory to it for easy docker re-use between projects
-    * From root docker-laravel directory
-        ln ../project-src-directory src
+# Clone this repo and initialize Laravel project using git in 'src' directory
 
 # Ensure Laravel project's .env file is correct in the src directory:
 
@@ -53,11 +51,10 @@
     
 # Final file structure
 
-    - docker-laravel (this codebase)
+    - docker-laravel
         - mysql
         - nginx
-        - src (symlink to project source code)
+        - src (project files)
         - docker-compose.yml
         - Dockerfile
         - readme.txt
-    - project-src-directory (peer of docker-laravel directory)
