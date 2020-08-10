@@ -26,7 +26,6 @@
 
     nginx - :8080
     php - :9000
-    phpMyAdmin - :8081
     npm
     composer
     artisan
