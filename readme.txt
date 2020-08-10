@@ -38,7 +38,6 @@
 # Containers created and their ports (if used) are as follows:
 
     nginx - :8080
-    mysql - :3306
     php - :9000
     phpMyAdmin - :8081
     npm
@@ -50,13 +49,4 @@
     host: mysql
     user: root
     pass: secret
-    
-# Final file structure
 
-    - docker-laravel
-        - mysql
-        - nginx
-        - src (project files)
-        - docker-compose.yml
-        - Dockerfile
-        - readme.txt
