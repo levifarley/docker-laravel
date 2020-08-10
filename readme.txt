@@ -22,19 +22,6 @@
     sudo docker-compose run --rm artisan key:generate
     sudo docker-compose run --rm npm install
 
-# For importing databases manually:
-
-    * Attach to mysql container
-        sudo docker exec -it mysql bash
-        mysql -uroot -psecret
-   
-    * Run these commands in mysql
-        set global max_allowed_packet=268435456;
-        GRANT ALL PRIVILEGES ON *.* TO 'homestead'@'%';
-
-    * Copy sql files to root project directory for access by Docker
-        sudo docker exec -i mysql mysql -uroot -psecret dbName < fileName.sql
-
 # Containers created and their ports (if used) are as follows:
 
     nginx - :8080
@@ -44,9 +31,4 @@
     composer
     artisan
 
-# Mysql credentials
-
-    host: mysql
-    user: root
-    pass: secret
 
