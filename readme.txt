@@ -6,11 +6,14 @@
     DB_HOST=mysql
     DB_DATABASE= *Project's database name*
 
-# If anything needs acess to our laravel container (like as an API), use IPV6 address [::1] instead of 'localhost' for routing to work properly
-
 # Ensure '/src/storage' directory is full permissions in container
     
     chmod 777 -R src/storage
+
+# Create network for containers to run on and link up with database container
+
+    docker network create work
+    docker network ls
 
 # Start docker
 

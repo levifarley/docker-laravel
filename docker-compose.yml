@@ -1,7 +1,8 @@
-version: '3'
+ersion: '3'
 
 networks:
-  laravel:
+  work:
+    external: true
 
 services:
   nginx:
@@ -15,7 +16,7 @@ services:
     depends_on:
       - php
     networks:
-      - laravel
+      - work
 
   php:
     build:
@@ -27,7 +28,7 @@ services:
     ports:
       - "9000:9000"
     networks:
-      - laravel
+      - work
 
   composer:
     image: composer:latest
@@ -38,7 +39,7 @@ services:
     depends_on:
       - php
     networks:
-      - laravel
+      - work
 
   npm:
     image: node:13.7
@@ -58,4 +59,4 @@ services:
     working_dir: /var/www/html
     entrypoint: ['php', '/var/www/html/artisan']
     networks:
-      - laravel
+      - work
